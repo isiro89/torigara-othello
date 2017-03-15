@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        <title>鶏ガラオセロ</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css">
+        <link rel="stylesheet" href="./src/css/game.css">
+        <link rel="stylesheet" href="./src/css/stone.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="game-title" class="none">
+                <div id="start-btn" class="btn brown"></div>
+            </div>
+            <div id="game" class="none">
+                <div id="game-board">
+                    <div id="othello-area">
+                        <table id="othello" data-enable="0">
+                            <tbody>
+                                <tr>
+                                    <td class="othello-cell x-1 y-1"><div id="cell-1" class="stone none" data-key="0"></div></td>
+                                    <td class="othello-cell x-2 y-1"><div id="cell-2" class="stone none" data-key="1"></div></td>
+                                    <td class="othello-cell x-3 y-1"><div id="cell-3" class="stone none" data-key="2"></div></td>
+                                    <td class="othello-cell x-4 y-1"><div id="cell-4" class="stone none" data-key="3"></div></td>
+                                    <td class="othello-cell x-5 y-1"><div id="cell-5" class="stone none" data-key="4"></div></td>
+                                    <td class="othello-cell x-6 y-1"><div id="cell-6" class="stone none" data-key="5"></div></td>
+                                    <td class="othello-cell x-7 y-1"><div id="cell-7" class="stone none" data-key="6"></div></td>
+                                    <td class="othello-cell x-8 y-1"><div id="cell-8" class="stone none" data-key="7"></div></td>
+                                    <td class="othello-cell x-1 y-2"><div id="cell-9" class="stone none" data-key="8"></div></td>
+                                    <td class="othello-cell x-2 y-2"><div id="cell-10" class="stone none" data-key="9"></div></td>
+                                    <td class="othello-cell x-3 y-2"><div id="cell-11" class="stone none" data-key="10"></div></td>
+                                    <td class="othello-cell x-4 y-2"><div id="cell-12" class="stone none" data-key="11"></div></td>
+                                    <td class="othello-cell x-5 y-2"><div id="cell-13" class="stone none" data-key="12"></div></td>
+                                    <td class="othello-cell x-6 y-2"><div id="cell-14" class="stone none" data-key="13"></div></td>
+                                    <td class="othello-cell x-7 y-2"><div id="cell-15" class="stone none" data-key="14"></div></td>
+                                    <td class="othello-cell x-8 y-2"><div id="cell-16" class="stone none" data-key="15"></div></td>
+                                    <td class="othello-cell x-1 y-3"><div id="cell-17" class="stone none" data-key="16"></div></td>
+                                    <td class="othello-cell x-2 y-3"><div id="cell-18" class="stone none" data-key="17"></div></td>
+                                    <td class="othello-cell x-3 y-3"><div id="cell-19" class="stone none" data-key="18"></div></td>
+                                    <td class="othello-cell x-4 y-3"><div id="cell-20" class="stone none" data-key="19"></div></td>
+                                    <td class="othello-cell x-5 y-3"><div id="cell-21" class="stone none" data-key="20"></div></td>
+                                    <td class="othello-cell x-6 y-3"><div id="cell-22" class="stone none" data-key="21"></div></td>
+                                    <td class="othello-cell x-7 y-3"><div id="cell-23" class="stone none" data-key="22"></div></td>
+                                    <td class="othello-cell x-8 y-3"><div id="cell-24" class="stone none" data-key="23"></div></td>
+                                    <td class="othello-cell x-1 y-4"><div id="cell-25" class="stone none" data-key="24"></div></td>
+                                    <td class="othello-cell x-2 y-4"><div id="cell-26" class="stone none" data-key="25"></div></td>
+                                    <td class="othello-cell x-3 y-4"><div id="cell-27" class="stone none" data-key="26"></div></td>
+                                    <td class="othello-cell x-4 y-4"><div id="cell-28" class="stone none" data-key="27"></div></td>
+                                    <td class="othello-cell x-5 y-4"><div id="cell-29" class="stone none" data-key="28"></div></td>
+                                    <td class="othello-cell x-6 y-4"><div id="cell-30" class="stone none" data-key="29"></div></td>
+                                    <td class="othello-cell x-7 y-4"><div id="cell-31" class="stone none" data-key="30"></div></td>
+                                    <td class="othello-cell x-8 y-4"><div id="cell-32" class="stone none" data-key="31"></div></td>
+                                    <td class="othello-cell x-1 y-5"><div id="cell-33" class="stone none" data-key="32"></div></td>
+                                    <td class="othello-cell x-2 y-5"><div id="cell-34" class="stone none" data-key="33"></div></td>
+                                    <td class="othello-cell x-3 y-5"><div id="cell-35" class="stone none" data-key="34"></div></td>
+                                    <td class="othello-cell x-4 y-5"><div id="cell-36" class="stone none" data-key="35"></div></td>
+                                    <td class="othello-cell x-5 y-5"><div id="cell-37" class="stone none" data-key="36"></div></td>
+                                    <td class="othello-cell x-6 y-5"><div id="cell-38" class="stone none" data-key="37"></div></td>
+                                    <td class="othello-cell x-7 y-5"><div id="cell-39" class="stone none" data-key="38"></div></td>
+                                    <td class="othello-cell x-8 y-5"><div id="cell-40" class="stone none" data-key="39"></div></td>
+                                    <td class="othello-cell x-1 y-6"><div id="cell-41" class="stone none" data-key="40"></div></td>
+                                    <td class="othello-cell x-2 y-6"><div id="cell-42" class="stone none" data-key="41"></div></td>
+                                    <td class="othello-cell x-3 y-6"><div id="cell-43" class="stone none" data-key="42"></div></td>
+                                    <td class="othello-cell x-4 y-6"><div id="cell-44" class="stone none" data-key="43"></div></td>
+                                    <td class="othello-cell x-5 y-6"><div id="cell-45" class="stone none" data-key="44"></div></td>
+                                    <td class="othello-cell x-6 y-6"><div id="cell-46" class="stone none" data-key="45"></div></td>
+                                    <td class="othello-cell x-7 y-6"><div id="cell-47" class="stone none" data-key="46"></div></td>
+                                    <td class="othello-cell x-8 y-6"><div id="cell-48" class="stone none" data-key="47"></div></td>
+                                    <td class="othello-cell x-1 y-7"><div id="cell-49" class="stone none" data-key="48"></div></td>
+                                    <td class="othello-cell x-2 y-7"><div id="cell-50" class="stone none" data-key="49"></div></td>
+                                    <td class="othello-cell x-3 y-7"><div id="cell-51" class="stone none" data-key="50"></div></td>
+                                    <td class="othello-cell x-4 y-7"><div id="cell-52" class="stone none" data-key="51"></div></td>
+                                    <td class="othello-cell x-5 y-7"><div id="cell-53" class="stone none" data-key="52"></div></td>
+                                    <td class="othello-cell x-6 y-7"><div id="cell-54" class="stone none" data-key="53"></div></td>
+                                    <td class="othello-cell x-7 y-7"><div id="cell-55" class="stone none" data-key="54"></div></td>
+                                    <td class="othello-cell x-8 y-7"><div id="cell-56" class="stone none" data-key="55"></div></td>
+                                    <td class="othello-cell x-1 y-8"><div id="cell-57" class="stone none" data-key="56"></div></td>
+                                    <td class="othello-cell x-2 y-8"><div id="cell-58" class="stone none" data-key="57"></div></td>
+                                    <td class="othello-cell x-3 y-8"><div id="cell-59" class="stone none" data-key="58"></div></td>
+                                    <td class="othello-cell x-4 y-8"><div id="cell-60" class="stone none" data-key="59"></div></td>
+                                    <td class="othello-cell x-5 y-8"><div id="cell-61" class="stone none" data-key="60"></div></td>
+                                    <td class="othello-cell x-6 y-8"><div id="cell-62" class="stone none" data-key="61"></div></td>
+                                    <td class="othello-cell x-7 y-8"><div id="cell-63" class="stone none" data-key="62"></div></td>
+                                    <td class="othello-cell x-8 y-8"><div id="cell-64" class="stone none" data-key="63"></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="popup" class="none">
+                             <div id="popup-title">
+                                <span></span>
+                            </div>
+                            <div id="mode-content" class="none">
+                                <div id="mode-info"></div>
+                                <div id="easy-btn" class="btn blue" data-enable="0"></div>
+                                <div id="normal-btn" class="btn red" data-enable="0"></div>
+                            </div>
+                            <div id="result-content" class="none">
+                                <div id="result-info"><span></span></div>
+                                <div id="result-acquisition">
+                                    <div id="acquisition-black"><span></span></div>
+                                    <div id="acquisition-white"><span></span></div>
+                                </div>
+                                <div id="result"><span></span></div>
+                                <div id="result-btns">
+                                    <div id="retry-btn" class="btn blue" data-enable="0"></div>
+                                    <div id="title-btn" class="btn red" data-enable="0"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="side-area">
+                        <div id="turn-telop-frame"><span></span></div>
+                        <div id="character" class="normal"></div>
+                        <div id="character-textbox"><span></span></div>
+                    </div>
+                    <div id="telop-frame" class='none'><span></span></div>
+                </div>
+            </div>
+            <div id="nowloading">
+                <div id="loading-title"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./src/js/event.js"></script>
+        <script type="text/javascript" src="./src/js/othelloConst.js"></script>
+        <script type="text/javascript" src="./src/js/othelloModel.js"></script>
+        <script type="text/javascript" src="./src/js/othelloView.js"></script>
+        <script type="text/javascript" src="./src/js/othelloManager.js"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', function() {
+                window.removeEventListener('load', arguments.callee);
+                (new window.OthelloView()).initialize();
+                (new window.OthelloManager()).initialize();
+            });
+        </script>
+    </body>
+</html>
