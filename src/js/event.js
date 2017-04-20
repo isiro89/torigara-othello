@@ -1,27 +1,26 @@
 this.Event2 = this.Event2 || {};
 (function(g) {
     var Event2;
-    
+
     (Event2 = function(type) {
         this.type       = type;
         this.instance   = null;
         this.result     = null;
     });
-    
+
     g.Event2 = Event2;
 })(this);
 
 this.EventDispatcher = this.EventDispatcher || {};
 (function(g) {
     var EventDispatcher, p;
-    
+
     (EventDispatcher = function() {
-        // this._listeners = {};
     });
     p = EventDispatcher.prototype;
 
     p._listeners = {};
-    
+
     p.addEvent = function(type, listener) {
         var listeners = this._listeners = this._listeners || {};
         var arr = listeners[type];
@@ -36,7 +35,7 @@ this.EventDispatcher = this.EventDispatcher || {};
         }
         return listener;
     };
-    
+
     p.removeEvent = function(type, listener) {
         var arr;
         var listeners = this._listeners;
@@ -55,7 +54,7 @@ this.EventDispatcher = this.EventDispatcher || {};
             }
         }
     };
-    
+
     p.removeEventAll = function(type) {
         if (!type) {
             this._listeners = {};
@@ -65,12 +64,12 @@ this.EventDispatcher = this.EventDispatcher || {};
             }
         }
     };
-    
+
     p.hasEvent = function(type) {
         var listeners = this._listeners;
         return !!(Object.keys(listeners).length && listeners[type]);
     }
-    
+
     p.dispatch = function(event, result) {
         var listeners;
         if (typeof event === 'string') {
@@ -85,7 +84,7 @@ this.EventDispatcher = this.EventDispatcher || {};
         this._dispatch(event, result);
         return true;
     };
-    
+
     /** @private */
     p._dispatch = function(event, result) {
         var l, fn, arr;
@@ -109,6 +108,6 @@ this.EventDispatcher = this.EventDispatcher || {};
             }
         }
     }
-    
+
     g.EventDispatcher = EventDispatcher;
 })(this);

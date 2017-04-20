@@ -626,7 +626,7 @@ this.OthelloView = this.OthelloView || {};
             case PREFIX_TYPE_HINT:
                 className += 'hint-';
                 break;
-           case PREFIX_TYPE_HIDE:
+            case PREFIX_TYPE_HIDE:
                 className += 'none';
                 break;
             case PREFIX_TYPE_NONE:
